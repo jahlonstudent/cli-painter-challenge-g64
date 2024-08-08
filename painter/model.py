@@ -39,7 +39,7 @@ class Triangle:
     
     def area(self) -> float:
         return 0.5 * abs((self.point_1.x * self.point_2.y - self.point_1.x * self.point_3.y) +
-                         (self.point_2.x * self.point_1.y - self.point_2.x * self.point_3.y) +
+                         (self.point_2.x * self.point_3.y - self.point_2.x * self.point_1.y) +
                          (self.point_3.x * self.point_1.y - self.point_3.x * self.point_2.y))
 
     def draw(self):
@@ -71,8 +71,8 @@ class Rectangle:
         plt.show()
     
     def __str__(self) -> str:
-        return f"Rectangle with opposite vertices at ({self.point_1.x}, {self.point_1.y})" \
-               f" and ({self.point_1.x}, {self.point_1.y})"
+        return f"Rectangle with vertices at ({self.point_1.x}, {self.point_1.y})" \
+               f" and ({self.point_2.x}, {self.point_2.y})"
 
 
 class Painter:
